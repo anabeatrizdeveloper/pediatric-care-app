@@ -1,38 +1,17 @@
 import React from 'react';
-import { TextInput, StyleSheet } from 'react-native';
-import { colors } from '../constants/colors';
+import { TextInput, StyleSheet, TextInputProps } from 'react-native';
 
-type Props = {
-  placeholder: string;
-  value: string;
-  onChangeText: (text: string) => void;
-  secureTextEntry?: boolean;
-};
+type Props = TextInputProps;
 
-export const AppInput = ({
-  placeholder,
-  value,
-  onChangeText,
-  secureTextEntry,
-}: Props) => {
-  return (
-    <TextInput
-      style={styles.input}
-      placeholder={placeholder}
-      value={value}
-      onChangeText={onChangeText}
-      secureTextEntry={secureTextEntry}
-    />
-  );
+export const AppInput = (props: Props) => {
+  return <TextInput style={styles.input} placeholderTextColor="#8A97AA" {...props} />;
 };
 
 const styles = StyleSheet.create({
   input: {
-    backgroundColor: colors.white,
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: colors.border,
-    marginBottom: 12,
+    flex: 1,
+    fontSize: 16,
+    color: '#102033',
+    fontFamily: 'Inter_400Regular',
   },
 });
