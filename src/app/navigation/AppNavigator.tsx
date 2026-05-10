@@ -23,6 +23,12 @@ import { ExamsScreen } from '../../features/exams/screens/ExamsScreen';
 import { CreateExamScreen } from '../../features/exams/screens/CreateExamScreen';
 import { ExamDetailsScreen } from '../../features/exams/screens/ExamDetailsScreen';
 
+import { HistoryScreen } from '../../features/history/screens/HistoryScreen';
+import { CreateHealthBookletScreen } from '../../features/history/screens/CreateHealthBookletScreen';
+import { HealthBookletDetailsScreen } from '../../features/history/screens/HealthBookletDetailsScreen';
+import { HealthBookletPdfScreen } from '../../features/history/screens/HealthBookletPdfScreen';
+import { HealthBookletAIScanScreen } from '../../features/history/screens/HealthBookletAIScanScreen';
+
 type ProfileType = 'responsavel' | 'pediatra';
 
 const Stack = createNativeStackNavigator();
@@ -96,6 +102,12 @@ export const AppNavigator = () => {
       <Stack.Screen name="Exams" component={ExamsScreen} />
       <Stack.Screen name="CreateExam" component={CreateExamScreen} />
       <Stack.Screen name="ExamDetails" component={ExamDetailsScreen} />
+
+      <Stack.Screen name="History" component={HistoryScreen} />
+      <Stack.Screen name="CreateHealthBooklet" component={CreateHealthBookletScreen} />
+      <Stack.Screen name="HealthBookletDetails" component={HealthBookletDetailsScreen} />
+      <Stack.Screen name="HealthBookletPdf" component={HealthBookletPdfScreen} />
+      <Stack.Screen name="HealthBookletAIScan" component={HealthBookletAIScanScreen} />
     </Stack.Navigator>
   );
 };
